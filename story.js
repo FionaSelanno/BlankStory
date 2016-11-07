@@ -1,28 +1,42 @@
 // The missing words:
-var noun = ["cat", "friend", "lollypop", "lady"];
-var verb = ["jumped", "chased"];
-var adjective = ["pink", "grumpy"];
+var nounArray = ["cat", "friend", "lollypop", "lady"];
+var verbArray = ["jumped", "chased"];
+var adjectiveArray = ["pink", "grumpy"];
 
 
-// Math.random(); will give a random number between 0 and 1, also a decimal number
-// Math.random() * 10; will give a number between 0 and 10
-// Math.floor(); will take a decimal number and round down the nearest whole number.
-// Math.floor(Math.random()*10); will give a round number between 0 and 9, because Math.floor() rounds down the number.
-// Math.floor(Math.random()*10)+1); will give a round number between 1 and 10.
-var rand = function(max) {
-  return(Math.floor(Math.random()* max) + 1);
-};
+//to prevent the words being repeated I have to pop the used word from the array. And then run the randomize function again:
 
-// -1 to get the index number
-var indexNoun = rand(noun.length)-1;
-var indexAdjective = rand(adjective.length)-1;
-var indexVerb = rand(verb.length)-1;
+//step1: create function for getting a random index of any array
+function arrayIndex(items){
+  var array = items;
+  var lengthArray = array.length;
+  var rand = function(lengthArray) {
+    var number = Math.floor(Math.random()* lengthArray) + 1;
+    // -1 to get the index number
+    var index = number - 1;
+    return index
+  };
+  return rand(lengthArray)
+}
+
+console.log(arrayIndex(nounArray));
+
+// step 2: create function to use that index to get the item from the array
+// step 3: function go delete that item form the array
+// console.log(arrayIndex(nounArray));
+
+
+//   var arrayPop = function(index){
+//       for(item=0; item<arrLenght; item++){
+//       var newArr= arr.pop(array(index));
+//       return newArr
+// };
 
 // The story:
 console.log("While hanging out after school, I saw a "
-+ noun[indexNoun] + " perched in a tree. My "
-+ noun[indexNoun] + " said we should try and catch it. I quickly grabbed my "
-+ adjective[indexAdjective] + " " + noun[indexNoun] + " from my backpack. The "
-+ noun[indexNoun] + " " + verb[indexVerb] + " out of the tree. My friend an I "
-+ verb[indexVerb] + " it passing an"
-+ adjective[indexAdjective] + " " + noun[indexNoun] + ".")
++ arrayIndex(nounArray) + " perched in a tree. My "
++ arrayIndex(nounArray) + " said we should try and catch it. I quickly grabbed my "
++ arrayIndex(adjectiveArray) + " " + arrayIndex(nounArray) + " from my backpack. The "
++ arrayIndex(nounArray) + " " + arrayIndex(verbArray) + " out of the tree. My friend an I "
++ arrayIndex(verbArray) + " it passing an"
++ arrayIndex(adjectiveArray) + " " + arrayIndex(verbArray) + ".")
