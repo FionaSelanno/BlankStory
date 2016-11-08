@@ -1,5 +1,5 @@
 // The missing words:
-var nounArray = ["cat", "friend", "lollypop", "lady", "bike"];
+var nounArray = ["cat", "friend", "lollypop"];
 var verbArray = ["jumped", "chased"];
 var adjectiveArray = ["pink", "grumpy"];
 
@@ -19,9 +19,11 @@ function arrayItem(arr){
   var item = array[rand(lengthArray)];
 
   // step 3: delete the item form the array to be able to return the new array:
+  // stop deleting items if the item is the last in the array. And keep returning this last item.
   var indexItem = array.indexOf(item);
-  var deletedItem = array.splice(indexItem,1);
-
+   if (indexItem !== 0){
+     var deletedItem = array.splice(indexItem,1); //The splice() method adds/removes items to/from an array, and returns the removed item(s).
+   }
   // step 4: return the item and new array to be able to use it
   return [item, array]
 }
