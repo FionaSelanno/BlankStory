@@ -1,5 +1,5 @@
 // The missing words:
-var nounArray = ["cat", "friend", "lollypop", "lady"];
+var nounArray = ["cat", "friend", "lollypop", "lady", "bike"];
 var verbArray = ["jumped", "chased"];
 var adjectiveArray = ["pink", "grumpy"];
 
@@ -17,43 +17,31 @@ function arrayItem(arr){
   };
   // step 2: use that index to get the item from the array:
   var item = array[rand(lengthArray)];
-  return item
+
+  // step 3: delete the item form the array to be able to return the new array:
+  var indexItem = array.indexOf(item);
+  var deletedItem = array.splice(indexItem,1);
+
+  // step 4: return the item and new array to be able to use it
+  return [item, array]
 }
 
-// call the function to return a random item of the nounArray:
-var x = arrayItem(nounArray);
-console.log(x);
+var nounValues = arrayItem(nounArray) //will give an array with item and array as elements
+nounArray = nounValues[1]; //will give the new array and changes the original nounArray
 
-// step 3: after returning that item delete it from the array
+var verbValues = arrayItem(verbArray);
+verbArray = verbValues[1];
 
-// step 3a: get the index of that item
-var index = nounArray.indexOf(x);
-console.log(index);
+var adjectiveValues = arrayItem(adjectiveArray);
+adjectiveArray = adjectiveValues[1];
 
-//step 3b: use the splice method to delete it from the array: nounArray.splice(0,1) =>The first parameter (0) defines the position where elements are deleted, second parameter(1) defines how many items will be deleted.
-var newArr = console.log(nounArray.splice(index,1));
-
-//step 3c: call the nounArray to see if the array has changed:
-console.log(nounArray);
-
-//step 3d: put all of this in a function witch takes the item and it's array as parameters:
-function newArray(i, arr){
-  var indexItem = arr.indexOf(i);
-  var newArr = arr.splice(indexItem,1);
-  return arr
-}
-
-// step 3f: see if the function is working:
-console.log(newArray(arrayItem(nounArray), nounArray));
-
-//refactor step 3f:
-console.log(newArray(x,nounArray));
-
+// arrayItem(nounArray)[0] will change the array, so first time calling an item of an array using e.g. nounValues[0].
+// Calling the rest of the item using e.g. arrayItem(nounArray)[0] so that the function with the new array will run again.
 // The story:
-// console.log("While hanging out after school, I saw a "
-// + arrayItem(nounArray) + " perched in a tree. My "
-// + arrayItem(nounArray) + " said we should try and catch it. I quickly grabbed my "
-// + arrayItem(adjectiveArray) + " " + arrayItem(nounArray) + " from my backpack. The "
-// + arrayItem(nounArray) + " " + arrayItem(verbArray) + " out of the tree. My friend an I "
-// + arrayItem(verbArray) + " it passing an"
-// + arrayItem(adjectiveArray) + " " + arrayItem(verbArray) + ".")
+console.log("While hanging out after school, I saw a -"
++ nounValues[0] + " perched in a tree. My -"
++ arrayItem(nounArray)[0] + " said we should try and catch it. I quickly grabbed my -"
++ adjectiveValues[0] + " -" + arrayItem(nounArray)[0] + " from my backpack. The -"
++ arrayItem(nounArray)[0] + " -" + verbValues[0] + " out of the tree. My friend an I -"
++ arrayItem(verbArray)[0] + " it passing a -"
++ arrayItem(adjectiveArray)[0] + " -" + arrayItem(nounArray)[0] + ".")
