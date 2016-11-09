@@ -1,10 +1,7 @@
-
-
 // The missing words:
 var nounArray = ["cat", "friend", "lollypop", "lady", "house"];
 var verbArray = ["jumped", "chased"];
 var adjectiveArray = ["pink", "grumpy"];
-
 
 //to prevent the words being repeated I have to delete the used word from the array. And then run the randomize function again:
 
@@ -39,6 +36,7 @@ verbArray = verbValues[1];
 var adjectiveValues = arrayItem(adjectiveArray);
 adjectiveArray = adjectiveValues[1];
 
+function fillInBlanks(){
 document.getElementById("noun1").innerHTML = nounValues[0];
 document.getElementById("noun2").innerHTML = arrayItem(nounArray)[0];
 document.getElementById("noun3").innerHTML = arrayItem(nounArray)[0];
@@ -50,6 +48,7 @@ document.getElementById("verb2").innerHTML = arrayItem(verbArray)[0];
 
 document.getElementById("adjective1").innerHTML = adjectiveValues[0];
 document.getElementById("adjective2").innerHTML = arrayItem(adjectiveArray)[0];
+}
 
 // arrayItem(nounArray)[0] will change the array, so first time calling an item of an array using e.g. nounValues[0].
 // Calling the rest of the item using e.g. arrayItem(nounArray)[0] so that the function with the new array will run again.
