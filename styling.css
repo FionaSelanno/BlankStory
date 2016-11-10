@@ -1,4 +1,41 @@
 /*stylesheet.css*/
 span{
-  color: blue;
+  color: #004F42;
+}
+
+h1{
+  font-size: 5em;
+  color: #004F42;
+}
+
+p{
+  font-size: 2.5em;
+  margin-bottom: 100px;
+  margin-top: 0;
+}
+
+main{
+  margin: 100px 200px;
+  font-family: 'Patrick Hand SC', cursive;
+  color: white;
+}
+
+body{
+  background-color: #A7E2E8;
+  /*background-image: url("http://wall-papers.info/images/owl-background-pictures/owl-background-pictures-12.jpg");*/
+}
+
+button{
+  background-color: #A7E2E8;
+  font-family: 'Patrick Hand SC', cursive;
+  border: 1px solid #004F42;
+  font-size: 1em;
+  color: #004F42;
+  border-radius: 10px;
+  float: right;
+  /*text-decoration: underline;*/
+
+}
+#users-input{
+  margin-right: 10px;
 }
