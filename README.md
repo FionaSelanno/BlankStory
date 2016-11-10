@@ -15,4 +15,6 @@ To complete the course I had to do the following challenge:
   4. Randomize the order using a Javascript builtin method. I got the code from the tutorial. 
   See [commit 3b8ce12](https://github.com/FionaSelanno/BlankStory/commit/3b8ce12bbd11a731e22022c32a811a2483035902) how I incorporated this block of code.
   5. Create a function that will delete an item from the array and return a new array: see [commit db38109](https://github.com/FionaSelanno/BlankStory/commit/db3810989b97a7beb7f832b279f1cb572223386d).
-  6. Refactor this function to be able to fill in the blanks of the story: see [commit 2545ac](https://github.com/FionaSelanno/BlankStory/commit/24545acf000c24ad1f70b1d3f891d84f30e211a3).
+  6. Refactor the delete function to be able to fill in the blanks of the story: see [commit 2545ac](https://github.com/FionaSelanno/BlankStory/commit/24545acf000c24ad1f70b1d3f891d84f30e211a3).
+  7. Able to use user's input to fill in the blanks: see [commit 4db2869](https://github.com/FionaSelanno/BlankStory/commit/4db2869e0c2d7141072f046924c2b8226a17cbdc).
+  8. Able to use computer's and user's input to fill in the blanks: I wanted to put all the code in one file. But after [trying](https://github.com/FionaSelanno/BlankStory/commit/f7063e0beb31b75df19361f0013fbbe630da572c) a lot of different things I decided to create a function for computer's input and one for user's input and putted the two in seperate files see [commit d2d65b5](https://github.com/FionaSelanno/BlankStory/commit/d2d65b55a29fad83a722f59f4461cc1421729471).
