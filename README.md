@@ -8,7 +8,7 @@ The goal of this app is to learn the basics of Javascript. I followed a tutorial
   * Deploy it and style it using HTML and CSS.
   
 visit the live version: http://blankstory-js.bitballoon.com/
-[<img width="1222" alt="schermafbeelding 2016-11-11 om 16 40 04" src="https://cloud.githubusercontent.com/assets/19530739/20220472/f5ff4eb2-a82d-11e6-8a19-16bc4649d222.png">]
+<img width="1222" alt="schermafbeelding 2016-11-11 om 16 40 04" src="https://cloud.githubusercontent.com/assets/19530739/20220472/f5ff4eb2-a82d-11e6-8a19-16bc4649d222.png">
   
 # Steps I've taken so far:
   1. Create the story template and show it somehow: I used console.log to print the story, I wrote the story on a javascript file and then let it run via the terminal using node js.)
