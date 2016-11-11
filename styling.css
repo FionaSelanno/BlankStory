@@ -1,9 +1,19 @@
 /*stylesheet.css*/
-span{
-  color: #004F42;
+body{
+  background-color: #A7E2E8;
+  height:100%;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  font-family: 'Patrick Hand SC', cursive;
+  color: white;
 }
 
 h1{
+  padding-bottom: 60px;
   font-size: 5em;
   color: #004F42;
 }
@@ -14,16 +24,7 @@ p{
   margin-top: 0;
 }
 
-main{
-  margin: 100px 200px;
-  font-family: 'Patrick Hand SC', cursive;
-  color: white;
-}
-
-body{
-  background-color: #A7E2E8;
-  /*background-image: url("http://wall-papers.info/images/owl-background-pictures/owl-background-pictures-12.jpg");*/
-}
+span{color: #004F42;}
 
 button{
   background-color: #A7E2E8;
@@ -33,9 +34,13 @@ button{
   color: #004F42;
   border-radius: 10px;
   float: right;
-  /*text-decoration: underline;*/
+}
 
+button:hover{
+  background-color: #004F42;
+  color: white;
 }
-#users-input{
-  margin-right: 10px;
-}
+
+button:focus {outline:0;}
+
+#users-input{margin-left: 10px;}
