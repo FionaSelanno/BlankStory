@@ -1,5 +1,5 @@
 #Introduction:
-The goal of this app is to learn the basics of Javascript. I followed a tutorial on Sitepoint. To complete the course I had to do the following challenge:
+The goal of this app is to learn the basics of Javascript. I followed a tutorial on [Sitepoint](https://www.sitepoint.com/premium/courses/introduction-to-javascript-2908) from David Green. To complete the course I had to do the following challenge:
   * Create a program that fills in the blanks of a story template. 
   * Randomize the order in which the script inserts the missing words. So each time you run it the outcome is unique. 
   * Modify the script so that words are not being repeated. 
